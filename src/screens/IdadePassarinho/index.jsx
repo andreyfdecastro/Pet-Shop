@@ -1,26 +1,16 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import styles from './styles/BirdStyles';
+import { View, Text, Image, StyleSheet } from 'react-native';
 
-export default function Bird() {
-  const navigation = useNavigation();
+export default function IdadePassarinho({ route }) {
+  const { image, name, detailType, detailValue } = route.params;
 
   return (
     <View style={styles.container}>
-      <Image source={require('../../images/bird.jpg')} style={styles.image} />
-      <Text style={styles.title}>Pássaro</Text>
-      <Text style={styles.description}>
-        Este é o nosso pássaro. Ele é muito colorido e adora cantar.
-      </Text>
-      <Text style={styles.info}>Informação adicional 1</Text>
-      <Text style={styles.info}>Informação adicional 2</Text>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('Categorias')}
-      >
-        <Text style={styles.buttonText}>Voltar</Text>
-      </TouchableOpacity>
+      <Image source={image} style={styles.image} />
+      <Text style={styles.title}>{name}</Text>
+      <Text style={styles.detailType}>{detailType}</Text>
+      <Text style={styles.detailValue}>{detailValue}</Text>
     </View>
   );
 }
+

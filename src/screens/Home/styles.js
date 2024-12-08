@@ -1,18 +1,18 @@
 import { StyleSheet } from 'react-native';
-
 export default StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#FFFFFF',
   },
   button: {
-    backgroundColor: '#007BFF',
+    backgroundColor: '#000000',
     padding: 10,
     borderRadius: 5,
   },
   buttonText: {
-    color: '#FFF',
-    fontSize: 18,
+    color: '#FFFFFF',
+    fontSize: 16,
   },
 });

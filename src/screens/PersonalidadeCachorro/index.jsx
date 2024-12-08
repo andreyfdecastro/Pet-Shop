@@ -1,26 +1,16 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import styles from './styles/DogStyles';
+import { View, Text, Image } from 'react-native';
+import styles from './styles'; // Certifique-se de que o caminho está correto
 
-export default function Dog() {
-  const navigation = useNavigation();
+export default function PersonalidadeCachorro({ route }) {
+  const { image, name, detailType, detailValue } = route.params;
 
   return (
     <View style={styles.container}>
-      <Image source={require('../../images/dog.jpg')} style={styles.image} />
-      <Text style={styles.title}>Cachorro</Text>
-      <Text style={styles.description}>
-        Este é o nosso cachorro. Ele é muito amigável e adora brincar.
-      </Text>
-      <Text style={styles.info}>Informação adicional 1</Text>
-      <Text style={styles.info}>Informação adicional 2</Text>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('Categorias')}
-      >
-        <Text style={styles.buttonText}>Voltar</Text>
-      </TouchableOpacity>
+      <Image source={image} style={styles.image} />
+      <Text style={styles.title}>{name}</Text>
+      <Text style={styles.detailType}>{detailType}</Text>
+      <Text style={styles.detailValue}>{detailValue}</Text>
     </View>
   );
 }
