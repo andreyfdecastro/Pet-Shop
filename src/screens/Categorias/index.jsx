@@ -3,7 +3,7 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import styles from './styles';
 
-const logoImage = require('../../../assets/images/logopet.png'); // Atualize o caminho e o nome da imagem conforme necessário
+const logoImage = require('../../../assets/images/logopet.png'); 
 
 export default function Categorias() {
   const navigation = useNavigation();
