@@ -3,13 +3,15 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import styles from './styles';
 
+const megImage = require('../../../assets/images/meg.jpg');
+
 export default function Cachorro() {
   const navigation = useNavigation();
+  const animalName = 'Meg';
 
   const handlePress = (screen, detailType, detailValue) => {
     navigation.navigate(screen, {
-      image: require('../../images/meg.jpg'),
-      name: 'Meg',
+      name: animalName,
       detailType,
       detailValue,
     });
@@ -17,10 +19,9 @@ export default function Cachorro() {
 
   return (
     <View style={styles.container}>
-      <Image source={require('../../images/meg.jpg')} style={styles.image} />
-      <Text style={styles.title}>Meg</Text>
+      <Text style={styles.title}>{animalName}</Text>
+      <Image source={megImage} style={styles.image} />
       <Text style={styles.description}>
-        Este é o nosso cachorro. Ele é muito amigável e adora brincar.
       </Text>
       <TouchableOpacity
         style={styles.button}
@@ -36,15 +37,9 @@ export default function Cachorro() {
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => handlePress('PersonalidadeCachorro', 'Personalidade', 'Brincalhão e amigável')}
+        onPress={() => handlePress('PersonalidadeCachorro', 'Personalidade', 'Amigável e brincalhão')}
       >
         <Text style={styles.buttonText}>Personalidade</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('Categorias')}
-      >
-        <Text style={styles.buttonText}>Voltar</Text>
       </TouchableOpacity>
     </View>
   );

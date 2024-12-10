@@ -1,30 +1,36 @@
-const styles = StyleSheet.create({
+const styles = {
   container: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
     justifyContent: 'center',
     alignItems: 'center',
     padding: 16,
   },
-  image: {
-    width: 200,
-    height: 200,
-    borderRadius: 100,
-    marginBottom: 16,
-  },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#000000',
     marginBottom: 8,
   },
-  detailType: {
-    fontSize: 18,
-    color: '#000000',
-    marginBottom: 4,
+  image: {
+    width: 200,
+    height: 200,
+    borderRadius: 10,
+    marginBottom: 16,
   },
-  detailValue: {
+  description: {
     fontSize: 16,
-    color: '#000000',
+    textAlign: 'center',
+    marginBottom: 16,
   },
-});
+  button: {
+    backgroundColor: '#007BFF',
+    padding: 12,
+    borderRadius: 8,
+    marginBottom: 8,
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+  },
+};
+
+export default styles;

@@ -1,16 +1,16 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
-import styles from './styles'; // Certifique-se de que o caminho está correto
+import styles from './styles'; 
 
-export default function PersonalidadeCachorro({ route }) {
-  const { image, name, detailType, detailValue } = route.params;
+const megImage = require('../../../assets/images/meg.jpg');
 
+export default function PersonalidadeCachorro() {
   return (
     <View style={styles.container}>
-      <Image source={image} style={styles.image} />
-      <Text style={styles.title}>{name}</Text>
-      <Text style={styles.detailType}>{detailType}</Text>
-      <Text style={styles.detailValue}>{detailValue}</Text>
+      <Image source={megImage} style={styles.image} />
+      <Text style={styles.title}>Meg</Text>
+      <Text style={styles.detailType}>Personalidade:</Text>
+      <Text style={styles.detailValue}>Amigável, brincalhona, divertida e ciumenta.</Text>
     </View>
   );
 }

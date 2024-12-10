@@ -1,16 +1,17 @@
-// src/screens/Passarinho/index.jsx
 import React from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import styles from './styles';
 
+const freddyImage = require('../../../assets/images/freddy.jpg');
+
 export default function Passarinho() {
   const navigation = useNavigation();
+  const animalName = 'Freddy';
 
   const handlePress = (screen, detailType, detailValue) => {
     navigation.navigate(screen, {
-      image: require('../../images/freddy.jpg'), // Imagem do passarinho
-      name: 'Freddy',
+      name: animalName,
       detailType,
       detailValue,
     });
@@ -18,34 +19,27 @@ export default function Passarinho() {
 
   return (
     <View style={styles.container}>
-      <Image source={require('../../images/freddy.jpg')} style={styles.image} />
-      <Text style={styles.title}>Freddy</Text>
+      <Text style={styles.title}>{animalName}</Text>
+      <Image source={freddyImage} style={styles.image} />
       <Text style={styles.description}>
-        Este é o nosso passarinho. Ele é muito colorido e adora cantar.
       </Text>
       <TouchableOpacity
         style={styles.button}
         onPress={() => handlePress('IdadePassarinho', 'Idade', '1 ano')}
       >
-        <Text style={styles.buttonText}>Idade: 1 ano</Text>
+        <Text style={styles.buttonText}>Idade</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.button}
         onPress={() => handlePress('RacaPassarinho', 'Raça', 'Canário')}
       >
-        <Text style={styles.buttonText}>Raça: Canário</Text>
+        <Text style={styles.buttonText}>Raça</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.button}
         onPress={() => handlePress('PersonalidadePassarinho', 'Personalidade', 'Alegre e cantor')}
       >
-        <Text style={styles.buttonText}>Personalidade: Alegre e cantor</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('Categorias')}
-      >
-        <Text style={styles.buttonText}>Voltar</Text>
+        <Text style={styles.buttonText}>Personalidade</Text>
       </TouchableOpacity>
     </View>
   );

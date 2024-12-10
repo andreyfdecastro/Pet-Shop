@@ -1,16 +1,16 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
-import styles from './styles'; // Verifique se o caminho está correto
+import styles from './styles'; 
 
-export default function PersonalidadePassarinho({ route }) {
-  const { image, name, personality } = route.params;
+const freddyImage = require('../../../assets/images/freddy.jpg');
 
+export default function PersonalidadePassarinho() {
   return (
     <View style={styles.container}>
-      <Image source={image} style={styles.image} />
-      <Text style={styles.title}>{name}</Text>
-      <Text style={styles.detailType}>Personalidade</Text>
-      <Text style={styles.detailValue}>{personality}</Text>
+      <Image source={freddyImage} style={styles.image} />
+      <Text style={styles.title}>Freddy</Text>
+      <Text style={styles.detailType}>Personalidade:</Text>
+      <Text style={styles.detailValue}>Alegre, cantor e extremamente divertido gostando muito de "conversar" cantando para os outros. </Text>
     </View>
   );
 }

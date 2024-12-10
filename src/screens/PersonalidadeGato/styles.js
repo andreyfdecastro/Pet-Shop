@@ -1,39 +1,36 @@
-import { StyleSheet } from 'react-native';
-
-export default StyleSheet.create({
+const styles = {
   container: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center',
-  },
-  image: {
-    width: 200,
-    height: 200,
+    alignItems: 'center',
+    padding: 16,
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginVertical: 10,
+    marginBottom: 8,
+  },
+  image: {
+    width: 200,
+    height: 200,
+    borderRadius: 10,
+    marginBottom: 16,
   },
   description: {
     fontSize: 16,
     textAlign: 'center',
-    marginHorizontal: 20,
-  },
-  info: {
-    fontSize: 16,
-    textAlign: 'center',
-    marginHorizontal: 20,
-    marginVertical: 5,
+    marginBottom: 16,
   },
   button: {
     backgroundColor: '#007BFF',
-    padding: 10,
-    marginVertical: 10,
-    borderRadius: 5,
+    padding: 12,
+    borderRadius: 8,
+    marginBottom: 8,
   },
   buttonText: {
-    color: '#FFF',
-    fontSize: 18,
+    color: '#fff',
+    fontSize: 16,
   },
-});
+};
+
+export default styles;

@@ -1,16 +1,16 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import styles from './styles'; 
 
-export default function RacaPassarinho({ route }) {
-  const { image, name, detailType, detailValue } = route.params;
+const freddyImage = require('../../../assets/images/freddy.jpg');
 
+export default function RacaPassarinho() {
   return (
     <View style={styles.container}>
-      <Image source={image} style={styles.image} />
-      <Text style={styles.title}>{name}</Text>
-      <Text style={styles.detailType}>{detailType}</Text>
-      <Text style={styles.detailValue}>{detailValue}</Text>
+      <Image source={freddyImage} style={styles.image} />
+      <Text style={styles.title}>Freddy</Text>
+      <Text style={styles.detailType}>Raça:</Text>
+      <Text style={styles.detailValue}>Calopsita de cor branca, cinza e preto.</Text>
     </View>
   );
 }

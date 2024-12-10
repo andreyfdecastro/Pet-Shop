@@ -1,16 +1,16 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image } from 'react-native';
+import styles from './styles'; 
 
-export default function IdadePassarinho({ route }) {
-  const { image, name, detailType, detailValue } = route.params;
+const freddyImage = require('../../../assets/images/freddy.jpg');
 
+export default function IdadePassarinho() {
   return (
     <View style={styles.container}>
-      <Image source={image} style={styles.image} />
-      <Text style={styles.title}>{name}</Text>
-      <Text style={styles.detailType}>{detailType}</Text>
-      <Text style={styles.detailValue}>{detailValue}</Text>
+      <Image source={freddyImage} style={styles.image} />
+      <Text style={styles.title}>Freddy</Text>
+      <Text style={styles.detailType}>Idade:</Text>
+      <Text style={styles.detailValue}>Mais de 8 anos de idade.</Text>
     </View>
   );
 }
-

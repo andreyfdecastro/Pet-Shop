@@ -1,15 +1,15 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image } from 'react-native';
+import styles from './styles';
 
-export default function IdadeGato({ route }) {
-  const { image, name, detailType, detailValue } = route.params;
+const tomImage = require('../../../assets/images/tom.jpg');
 
+export default function IdadeGato() {
   return (
     <View style={styles.container}>
-      <Image source={image} style={styles.image} />
-      <Text style={styles.title}>{name}</Text>
-      <Text style={styles.detailType}>{detailType}</Text>
-      <Text style={styles.detailValue}>{detailValue}</Text>
+      <Image source={tomImage} style={styles.image} />
+      <Text style={styles.title}>Idade:</Text>
+      <Text style={styles.description}>Não sabemos a idade correta porem acreditamo que seja mais de 2 anos de idade.</Text>
     </View>
   );
 }

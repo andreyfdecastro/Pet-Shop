@@ -2,15 +2,15 @@ import React from 'react';
 import { View, Text, Image } from 'react-native';
 import styles from './styles'; 
 
-export default function RacaCachorro({ route }) {
-  const { image, name, detailType, detailValue } = route.params;
+const megImage = require('../../../assets/images/meg.jpg');
 
+export default function RacaCachorro() {
   return (
     <View style={styles.container}>
-      <Image source={image} style={styles.image} />
-      <Text style={styles.title}>{name}</Text>
-      <Text style={styles.detailType}>{detailType}</Text>
-      <Text style={styles.detailValue}>{detailValue}</Text>
+      <Image source={megImage} style={styles.image} />
+      <Text style={styles.title}>Meg</Text>
+      <Text style={styles.detailType}>Raça:</Text>
+      <Text style={styles.detailValue}>Pastor alemão.</Text>
     </View>
   );
 }
