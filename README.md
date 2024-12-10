@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Este é um projeto de um aplicativo de Pet Shop desenvolvido em React Native. O aplicativo permite que os usuários naveguem por diferentes categorias de animais, vejam informações sobre cada animal e aprendam mais sobre o desenvolvedor.
+Este é um projeto de Itens que eu estava devendo de matéria, ele se consiste em um aplicativo de Pet Shop desenvolvido em React Native. O aplicativo permite que os usuários naveguem por diferentes categorias de animais, vejam informações sobre cada animal e aprendam mais sobre o desenvolvedor.
 
 ## Funcionalidades
 
