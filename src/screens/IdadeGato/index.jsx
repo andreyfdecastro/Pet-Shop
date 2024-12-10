@@ -9,7 +9,7 @@ export default function IdadeGato() {
     <View style={styles.container}>
       <Image source={tomImage} style={styles.image} />
       <Text style={styles.title}>Idade:</Text>
-      <Text style={styles.description}>Não sabemos a idade correta porem acreditamo que seja mais de 2 anos de idade.</Text>
+      <Text style={styles.description}>Não sabemos a idade correta porem acreditamos que seja mais de 2 anos de idade.</Text>
     </View>
   );
 }
